@@ -1,4 +1,7 @@
-
+<?php
+	include("function/session.php");
+	include("db/dbconn.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>

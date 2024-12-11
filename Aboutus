@@ -24,3 +24,14 @@
 	<script src="js/transition.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 </head>
+<body>
+<div id="header">
+		<img src="img/sneakers.png">
+		<label> Shoe Store</label>
+			<ul>
+				<li><a href="#signup"   data-toggle="modal">Sign Up</a></li>
+				<li><a href="#login"   data-toggle="modal">Login</a></li>
+			</ul>
+	</div>
+
+</body>

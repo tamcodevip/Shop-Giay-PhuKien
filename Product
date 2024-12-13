@@ -1,4 +1,0 @@
-<?php
-	include("function/login.php");
-	include("function/customer_signup.php");
-?>

@@ -1,8 +1,10 @@
+
 <?php
 	include("../function/session.php");
 	include("../db/dbconn.php");
 ?>
 
+<!-- sql shoessgr and .. -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,7 +30,7 @@
 <body>
 	<div id="header" style="position:fixed;">
 		<img src="../img/sneakers.png">
-		<label>Online Shoe Store</label>
+		<label> Shoe Store</label>
 
 			<?php
 				$id = (int) $_SESSION['id'];

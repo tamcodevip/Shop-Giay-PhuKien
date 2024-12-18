@@ -51,7 +51,7 @@
 
 			<ul>
 				<li><a href="../function/admin_logout.php"><i class="icon-off icon-white"></i>logout</a></li>
-				<li>Welcome:&nbsp;&nbsp;&nbsp;<i class="icon-user icon-white"></i><?php echo $fetch['username']; ?></a></li>
+				<li>Xin Chào :&nbsp;&nbsp;&nbsp;<i class="icon-user icon-white"></i><?php echo $fetch['username']; ?></a></li>
 			</ul>
 	</div>
 
@@ -78,7 +78,7 @@
 							?>
 							<tr>
 								<td><input type="text" name="product_name" placeholder="Product Name" style="width:250px;" required></td>
-							<tr/>
+							<tr>
 							<tr>
 								<td><input type="text" name="product_price" placeholder="Price" style="width:250px;" required></td>
 							</tr>
@@ -89,7 +89,7 @@
 								<td><input type="text" name="brand" placeholder="Brand Name	" style="width:250px;" required></td>
 							</tr>
 							<tr>
-								<td><input type="number" name="qty" placeholder="No. of Stock" style="width:250px;" required></td>
+								<td><input type="number" name="qty" placeholder="Số Lượng" style="width:250px;" required></td>
 							</tr>
 							<tr>
 								<td><input type="hidden" name="category" value="basketball"></td>
@@ -135,8 +135,8 @@
 										move_uploaded_file($temp,"../photo/".$name);
 
 
-				$q1 = $conn->query("INSERT INTO product ( product_id,product_name, product_price, product_size, product_image, brand, category)
-				VALUES ('$product_code','$product_name','$product_price','$product_size','$name', '$brand', '$category')");
+										$q1 = $conn->query("INSERT INTO product (product_id, product_name, product_price, product_size, product_image, brand, category) VALUES ('$product_code','$product_name','$product_price','$product_size','$name', '$brand', '$category')");
+
 
 				$q2 = $conn->query("INSERT INTO stock ( product_id, qty) VALUES ('$product_code','$qty')");
 
@@ -151,16 +151,17 @@
 			<li><a href="admin_home.php" style="color:#333;">Bảng Thống Kê</a></li>
 			<li><a href="admin_home.php">Sản Phẩm</a>
 				<ul>
-					<li><a href="admin_feature.php "style="font-size:15px; margin-left:15px;">Features
-					</a></li>
-					<li><a href="admin_product.php "style="font-size:15px; margin-left:15px;">Basketball</a></li>
-					<li><a href="admin_football.php" style="font-size:15px; margin-left:15px;">Football</a></li>
-					<li><a href="admin_running.php"style="font-size:15px; margin-left:15px;">Running</a></li>
+				<li><a href="admin_all_product.php"style="font-size:15px; margin-left:15px;">Product All</a></li>
+
+				<li><a href="admin_feature.php "style="font-size:15px; margin-left:15px;">Đặc Trưng</a></li>
+					<li><a href="admin_product.php "style="font-size:15px; margin-left:15px;">Bóng rổ</a></li>
+					<li><a href="admin_football.php" style="font-size:15px; margin-left:15px;">Bóng đá</a></li>
+					<li><a href="admin_running.php"style="font-size:15px; margin-left:15px;">Chạy Bộ</a></li>
 				</ul>
 			</li>
 			<li><a href="transaction.php">Giao Dịch</a></li>
 			<li><a href="customer.php">Khách Hàng</a></li>
-			<li><a href="message.php">Messages</a></li>
+			<li><a href="message.php">Hộp Thư</a></li>
 			<li><a href="order.php">Orders</a></li>
 		</ul>
 	</div>
@@ -175,12 +176,12 @@
 			<table class="table table-hover" style="background-color:;">
 				<thead>
 				<tr style="font-size:20px;">
-					<th>Product Image</th>
-					<th>Product Name</th>
-					<th>Product Price</th>
-					<th>Product Sizes</th>
-					<th>No. of Stock</th>
-					<th>Action</th>
+					<th>Hình Ảnh</th>
+					<th>Tên Sản Phẩm</th>
+					<th>Giá Sản Phẩm</th>
+					<th>Sản Phẩm Sizes</th>
+					<th>Số Lượng</th>
+					<th>Hành Vi</th>
 				</tr>
 				</thead>
 				<tbody>
@@ -205,12 +206,40 @@
 					?>
 
 					<td><?php echo $fetch1['qty']?></td>
-					<td style="width:220px;">
-					<?php
-					echo "<a href='stockin.php?id=".$id."' class='btn btn-success' rel='facebox'><i class='icon-plus-sign icon-white'></i> Stock In</a> ";
-					echo "<a href='stockout.php?id=".$id."' class='btn btn-danger' rel='facebox'><i class='icon-minus-sign icon-white'></i> Stock Out</a>";
-					?>
+					<td style="">
+					<ul style="list-style-type: none; padding: 0; margin: 0;">
+    <li style="margin-bottom: 5px;">
+        <a href='del.php?id=<?php echo $id; ?>' class='btn btn-danger'>
+            <i class='icon-trash icon-white'></i> Xóa
+        </a>
+    </li>
+    <li style="margin-bottom: 5px;">
+        <a href='edit.php?id=<?php echo $id; ?>' class='btn btn-warning'>
+            <i class='icon-edit icon-white'></i> Sửa
+        </a>
+    </li>
+    <li style="margin-bottom: 5px;">
+        <a href='stockin.php?id=<?php echo $id; ?>' class='btn btn-success' rel='facebox'>
+            <i class='icon-plus icon-white'></i> Thêm
+        </a>
+    </li>
+    <li>
+        <a href='stockout.php?id=<?php echo $id; ?>' class='btn btn-info' rel='facebox'>
+            <i class='icon-minus icon-white'></i> Giảm
+        </a>
+    </li>
+</ul>
+
 					</td>
+
+					<td>
+						<?php
+				
+						?>
+						</td>
+
+
+					
 				</tr>
 				<?php
 					}

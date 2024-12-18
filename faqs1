@@ -57,3 +57,83 @@
 					<form method="post">
 					<center>
 					<form method="post">
+
+
+
+<input type="text" name="firstname" placeholder="Họ" required>
+						<!-- <input type="text" name="mi" placeholder="Middle Initial" maxlength="1" required> -->
+						<input type="text" name="lastname" placeholder="Tên" required>
+						<input type="text" name="address" placeholder="Địa Chỉ" style="width:430px;"required>
+						<input type="text" name="country" placeholder="Quốc Gia" required>
+						<input type="text" name="zipcode" placeholder="ZIP Code" required maxlength="6">
+						<!-- <input type="text" name="mobile" placeholder="Mobile Number" maxlength="11"> -->
+						<input type="text" name="telephone" placeholder="SĐT" maxlength="8">
+						<input type="email" name="email" placeholder="Email" required>
+						<input type="password" name="password" placeholder="Mật Khẩu" required>
+						</center>
+					</div>
+				<div class="modal-footer">
+					<a href="account.php?id=<?php echo $fetch['customerid']; ?>"><input type="button" class="btn btn-success" name="edit" value="Edit Account"></a>
+					<button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Close</button>
+				</div>
+					</form>
+			</div>
+
+
+
+	<br>
+<div id="container">
+	<div class="nav">
+			 <ul>
+				<li><a href="home.php">   <i class="icon-home"></i>Home</a></li>
+				<li><a href="product1.php"> 			 <i class="icon-th-list"></i>Product</a></li>
+				<li><a href="aboutus1.php">   <i class="icon-bookmark"></i>About Us</a></li>
+				<li><a href="contactus1.php"><i class="icon-inbox"></i>Contact Us</a></li>
+				<li><a href="privacy1.php"><i class="icon-info-sign"></i>Privacy Policy</a></li>
+				<li><a href="faqs1.php"><i class="icon-question-sign"></i>FAQs</a></li>
+			</ul>
+	</div>
+
+	<br />
+	<br />
+
+	<div id="content">
+			<legend>Các câu hỏi thường được hỏi
+			</legend>
+
+				 <h4>   BẠN CÓ VẬN CHUYỂN KHÔNG?				 </h4>
+					<p style="text-indent:60px;">Vâng, chúng tôi vận chuyển sản phẩm thông qua LBC và 2GO. </p>
+				<hr>
+					<h4>BẠN CÓ GIAO HÀNG KHÔNG? 					</h4>
+						<p style="text-indent:60px;">Không, chúng tôi chỉ cung cấp dịch vụ vận chuyển.</p>
+				<hr>
+					<h4>TÔI SẼ NHẬN ĐƯỢC ĐƠN HÀNG CỦA MÌNH KHI NÀO?					</h4>
+						<p style="text-indent:60px;">Chúng tôi sẽ gửi sản phẩm của bạn trong vòng 2-3 ngày xung quanh Negros Occidental và sẽ mất 4-6 ngày giao hàng trên toàn quốc.</p>
+				<hr>
+					<h4>TÔI THANH TOÁN ĐƠN HÀNG BẰNG CÁCH NÀO?					</h4>
+					<p style="text-indent:60px;">Chỉ thông qua thanh toán PAYPAL.</p>
+
+		</div>
+</div>
+	<br />
+<div>
+	<br />
+	<div id="footer">
+		<div class="foot">
+			<label style="font-size:17px;"> Copyrght &copy; </label>
+			<p style="font-size:25px;">Online Shoe Store Inc. 2024 Brought To You by <a href=""></a></p>
+		</div>
+
+			<div id="foot">
+				<h4>Links</h4>
+					<ul>
+						<a href="http://www.facebook.com/OnlineShoeStore"><li>Facebook</li></a>
+						<a href="http://www.twitter.com/OnlineShoeStore"><li>Twitter</li></a>
+						<a href="http://www.pinterest.com/OnlineShoeStore"><li>Pinterest</li></a>
+						<a href="http://www.tumblr.com/OnlineShoeStore"><li>Tumblr</li></a>
+					</ul>
+			</div>
+
+	</div>
+</body>
+</html>

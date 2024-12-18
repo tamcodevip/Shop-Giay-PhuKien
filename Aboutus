@@ -6,7 +6,7 @@
 <html>
 <head>
 	<title> Shoe Store</title>
-	<link rel="icon" href="img/logo.jpg" />
+	<link rel="icon" href="img/sneakers.png" />
 	<link rel = "stylesheet" type = "text/css" href="css/style.css" media="all">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<script src="js/bootstrap.js"></script>
@@ -61,16 +61,16 @@
 					<div class="modal-body">
 						<center>
 					<form method="post">
-						<input type="text" name="firstname" placeholder="Firstname" required>
-						<input type="text" name="mi" placeholder="Middle Initial" maxlength="1" required>
-						<input type="text" name="lastname" placeholder="Lastname" required>
-						<input type="text" name="address" placeholder="Address" style="width:430px;"required>
-						<input type="text" name="country" placeholder="Province" required>
+						<input type="text" name="Họ" placeholder="Họ" required>
+						<!-- <input type="text" name="mi" placeholder="Middle Initial" maxlength="1" required> -->
+						<input type="text" name="Tên" placeholder="Tên" required>
+						<input type="text" name="Địa Chỉ" placeholder="Địa Chỉ" style="width:430px;"required>
+						<input type="text" name="Tỉnh" placeholder="Tỉnh" required>
 						<input type="text" name="zipcode" placeholder="ZIP Code" required maxlength="6">
-						<input type="text" name="mobile" placeholder="Mobile Number" maxlength="11">
-						<input type="text" name="telephone" placeholder="Telephone Number" maxlength="8">
+						<!-- <input type="text" name="mobile" placeholder="Mobile Number" maxlength="11"> -->
+						<input type="text" name="SĐT" placeholder="SĐT" maxlength="8">
 						<input type="email" name="email" placeholder="Email" required>
-						<input type="password" name="password" placeholder="Password" required>
+						<input type="password" name="Mật Khẩu" placeholder="Mật Khẩu" required>
 						</center>
 					</div>
 				<div class="modal-footer">
@@ -99,11 +99,11 @@
 
 	<legend>About Us</legend>
 		<div id="content">
-			<legend><h3>Mission</h3></legend>
-					<h4 style="text-indent:60px;">To provide a high quality footwear that suit the athletes style and to be one of the leading sports footwear apparel in the country.</h4>
+			<legend><h3>Sứ mệnh			</h3></legend>
+					<h4 style="text-indent:60px;">Cung cấp giày chất lượng cao phù hợp với phong cách của các vận động viên và trở thành một trong những nhà cung cấp hàng đầu về giày thể thao và trang phục tại quốc gia này.</h4>
 			<br />
-				<legend><h3>Vision</h3></legend>
-					<h4 style="text-indent:60px;">Online Shoe Store, the company that inspire, motivate, and give determination to the sports enthusiast.</h4>
+				<legend><h3>Tầm nhìn</h3></legend>
+					<h4 style="text-indent:60px;">Online Shoe Store - công ty truyền cảm hứng, động viên và thúc đẩy quyết tâm của các người yêu thích thể thao</h4>
 			<br />
 
 		</div>

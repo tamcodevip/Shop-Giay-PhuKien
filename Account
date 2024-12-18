@@ -37,7 +37,7 @@
 
 			<ul>
 				<li><a href="function/logout.php"><i class="icon-off icon-white"></i>logout</a></li>
-				<li><a href="#profile" href  data-toggle="modal">Welcome:&nbsp;&nbsp;&nbsp;<i class="icon-user icon-white"></i><?php echo $fetch['firstname']; ?>&nbsp;<?php echo $fetch['lastname'];?></a></li>
+				<li>Xin Chào:&nbsp;&nbsp;&nbsp;<a href="#profile" href  data-toggle="modal"><i class="icon-user icon-white"></i><?php echo $fetch['firstname']; ?>&nbsp;<?php echo $fetch['lastname'];?></a></li>
 			</ul>
 	</div>
 <div id="container">
@@ -72,7 +72,7 @@
 									<td>Firstname:</td><td><input type="text" name="firstname" placeholder="Firstname" required value="<?php echo $firstname; ?>"></td>
 								</tr>
 								<tr>
-									<td>M.I. :</td><td><input type="text" name="mi" placeholder="Middle Initial" maxlength="1" required value="<?php echo $mi;?>"></td>
+									<!-- <td>M.I. :</td><td><input type="text" name="mi" placeholder="Middle Initial" maxlength="1" required value="<?php echo $mi;?>"></td> -->
 								</tr>
 								<tr>
 									<td>Lastname:</td><td><input type="text" name="lastname" placeholder="Lastname" required value="<?php  echo $lastname;?>"></td>
@@ -87,7 +87,7 @@
 									<td>ZIP Code:</td><td><input type="text" name="zipcode" placeholder="ZIP Code" required value="<?php echo $zipcode;?>" maxlength="4"></td>
 								</tr>
 								<tr>
-									<td>Mobile Number:</td><td><input type="text" name="mobile" placeholder="Mobile Number" value="<?php echo $mobile;?>" maxlength="11"></td>
+									<!-- <td>Mobile Number:</td><td><input type="text" name="mobile" placeholder="Mobile Number" value="<?php echo $mobile;?>" maxlength="11"></td> -->
 								</tr>
 								<tr>
 									<td>Telephone Number:</td><td><input type="text" name="telephone" placeholder="Telephone Number" value="<?php echo $telephone;?>" maxlength="8"></td>

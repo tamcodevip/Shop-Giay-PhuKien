@@ -79,18 +79,18 @@
 					<h3 id="myModalLabel">Sign Up Here...</h3>
 				</div>
 					<div class="modal-body">
-						<center>
+					<center>
 					<form method="post">
-						<input type="text" name="firstname" placeholder="Firstname" required>
-						<input type="text" name="mi" placeholder="Middle Initial" maxlength="1" required>
-						<input type="text" name="lastname" placeholder="Lastname" required>
-						<input type="text" name="address" placeholder="Address" style="width:430px;"required>
-						<input type="text" name="country" placeholder="Province" required>
+						<input type="text" name="Họ" placeholder="Họ" required>
+						<!-- <input type="text" name="mi" placeholder="Middle Initial" maxlength="1" required> -->
+						<input type="text" name="Tên" placeholder="Tên" required>
+						<input type="text" name="Địa Chỉ" placeholder="Địa Chỉ" style="width:430px;"required>
+						<input type="text" name="Tỉnh" placeholder="Tỉnh" required>
 						<input type="text" name="zipcode" placeholder="ZIP Code" required maxlength="6">
-						<input type="text" name="mobile" placeholder="Mobile Number" maxlength="11">
-						<input type="text" name="telephone" placeholder="Telephone Number" maxlength="8">
+						<!-- <input type="text" name="mobile" placeholder="Mobile Number" maxlength="11"> -->
+						<input type="text" name="SĐT" placeholder="SĐT" maxlength="8">
 						<input type="email" name="email" placeholder="Email" required>
-						<input type="password" name="password" placeholder="Password" required>
+						<input type="password" name="Mật Khẩu" placeholder="Mật Khẩu" required>
 						</center>
 					</div>
 				<div class="modal-footer">
@@ -119,7 +119,16 @@
 			<li>|</li>
 			<li><a href="football.php">Football</a></li>
 			<li>|</li>
-			<li><a href="running1.php">Running</a></li>
+			<li><a href="running.php"  style="color:#111;">Running</a></li>
+			<!-- <li><a href="accessories.php">Phụ Kiện </a></li> -->
+			<li>|</li>
+
+			<li><a href="nike.php">Nike </a></li>
+			<li>|</li>
+
+			<li><a href="adidas.php">Adidas </a></li>
+
+
 		</ul>
 
 	</div>
@@ -151,7 +160,7 @@
 							echo "<a href='details.php?id=".$fetch['product_id']."'><img class='img-polaroid' src='photo/".$fetch['product_image']."' height = '300px' width = '300px'></a>";
 							echo "".$fetch['product_name']."";
 							echo "<br />";
-							echo "Rs ".$fetch['product_price']."";
+							echo "Giá: <strong>" . number_format($fetch['product_price'], 2, ',', '.') . "</strong> VNĐ";
 							echo "<br />";
 							echo "<h3 class='text-info' style='position:absolute; margin-top:-90px; text-indent:15px;'> Size: ".$fetch['product_size']."</h3>";
 							echo "</center>";
